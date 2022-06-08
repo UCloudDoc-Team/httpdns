@@ -4,6 +4,8 @@
 * 产品简介
     * [什么是HTTPDNS](/httpdns/introduction/concept)
     * [产品优势](/httpdns/introduction/advantages)
+    * [产品定价](/httpdns/introduction/charge)
+
 * 操作指南
     * 应用管理
         * [创建应用](/httpdns/guide/app/createapp)
