@@ -13,7 +13,7 @@
     * 域名管理
         * [添加域名](/httpdns/guide/host/createhost)
         * [删除域名](/httpdns/guide/host/deletehost)
-        * [查看域名解析两](/httpdns/guide/host/monitor)
+        * [查看域名解析量](/httpdns/guide/host/monitor)
 * 常见问题
     * 工作原理相关
       
