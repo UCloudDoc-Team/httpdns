@@ -2,19 +2,11 @@
 
 本文介绍Android SDK的接入说明。
 
-## Version
-
-> Version: 1.0.0 (code:1)
-
-## 兼容性
-
-> android 6.0(api23) 及以上
-
 ## 操作指南
 
 ### 使用前提
 
-* 已创建应用并添加域名，记录对应应用的***AppKey***和***AppSecret***。**不在域名管理中的域名，sdk将无法解析**。下载SDK安装包。
+* 已创建应用并添加域名，记录对应应用的**AppKey**和**AppSecret**。**不在域名管理中的域名，sdk将无法解析**。下载Android SDK安装包。
 * 将httpdns-sdk-android.aar包放置于android studio的app项目目录里的libs目录下
 * 编辑app/build.gradle配置文件，按照如下方式配置依赖项：
 
