@@ -10,7 +10,7 @@
 
 3、填写应用信息，点击**确定**，即创建成功。
 
-![](/images/createapp2.png)
+![](/images/createapp02.png)
 
 4，列表页面可查看已创建的应用。
 
