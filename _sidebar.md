@@ -16,5 +16,6 @@
         * [添加域名](/httpdns/guide/host/createhost)
         * [删除域名](/httpdns/guide/host/deletehost)
         * [查看域名解析量](/httpdns/guide/host/monitor)
-* 常见问题
-    * 工作原理相关
+* 开发指南
+    * [Android SDK接入](/httpdns/sdk/androidsdk)
+    * [IOS SDK接入](/httpdns/guide/sdk/iossdk)
