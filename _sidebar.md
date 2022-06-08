@@ -18,4 +18,4 @@
         * [查看域名解析量](/httpdns/guide/host/monitor)
 * 开发指南
     * [Android SDK接入](/httpdns/sdk/androidsdk)
-    * [IOS SDK接入](/httpdns/guide/sdk/iossdk)
+    * [iOS SDK接入](/httpdns/sdk/iossdk)
