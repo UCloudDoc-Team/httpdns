@@ -27,7 +27,6 @@
 }
  ```
 
-<br/>
 
 #### 快速开始
 
@@ -123,7 +122,6 @@ static HttpDnsService getService(@NonNull Context applicationContext, @NonNull S
 static HttpDnsService getService(@NonNull Context applicationContext, @NonNull String appKey, @NonNull String appSecret)
 ```
 
-<br/>
 
 ### HttpDnsService
 
@@ -140,7 +138,6 @@ static HttpDnsService getService(@NonNull Context applicationContext, @NonNull S
 void register(HttpDnsConfig config, @NonNull String serviceUrl, @NonNull RegisterCallback registerCallback);
 ```
 
-<br>
 
 #### 注册私有化部署HttpDnsService
 
@@ -155,7 +152,6 @@ void register(HttpDnsConfig config, @NonNull String serviceUrl, @NonNull Registe
 void register(HttpDnsConfig config, @NonNull String serviceUrl, @NonNull RegisterCallback registerCallback);
 ```
 
-<br>
 
 #### 添加解析回调
 
@@ -169,7 +165,6 @@ void register(HttpDnsConfig config, @NonNull String serviceUrl, @NonNull Registe
 void addParseHostCallback(ParseHostCallback callback);
 ```
 
-<br>
 
 #### 移除解析回调
 
@@ -182,7 +177,7 @@ void addParseHostCallback(ParseHostCallback callback);
 void removeParseHostCallback(ParseHostCallback callback);
 ```
 
-<br>
+
 
 #### 设置预解析域名列表
 
@@ -200,7 +195,7 @@ void removeParseHostCallback(ParseHostCallback callback);
 void setPreParseHosts(List<Host> hosts);
 ``` 
 
-<br>
+
 
 #### 异步解析域名，获取IPv4解析结果列表
 
@@ -215,7 +210,6 @@ void setPreParseHosts(List<Host> hosts);
 String[] parseIpsAsync(String host);
 ``` 
 
-<br>
 
 #### 异步解析域名，获取IPv6解析结果列表
 
@@ -230,7 +224,6 @@ String[] parseIpsAsync(String host);
 String[] parseIPv6sAsync(String host);
 ``` 
 
-<br>
 
 #### 设置是否允许返回超时的解析结果
 
@@ -243,7 +236,7 @@ String[] parseIPv6sAsync(String host);
 void setExpiredResultEnabled(boolean enable);
 ``` 
 
-<br>
+
 
 #### 设置是否允许启用缓存
 
@@ -256,7 +249,6 @@ void setExpiredResultEnabled(boolean enable);
 void setCachedResultEnabled(boolean enable);
 ``` 
 
-<br>
 
 #### 设置是否允许启用缓存，以及是否在缓存加载过后自动清除
 
@@ -270,7 +262,6 @@ void setCachedResultEnabled(boolean enable);
 void setCachedResultEnabled(boolean enable, boolean autoCleanCacheAfterLoad);
 ``` 
 
-<br>
 
 #### 设置降级策略
 
@@ -297,7 +288,6 @@ void setDegradationFilter(DegradationFilter filter);
 void setPreParseAfterNetworkChanged(boolean enable);
 ``` 
 
-<br>
 
 #### 设置请求超时时间
 
@@ -311,7 +301,6 @@ void setPreParseAfterNetworkChanged(boolean enable);
 void setRequestTimeout(int timeout);
 ```
 
-<br>
 
 ### DegradationFilter
 
@@ -328,7 +317,6 @@ void setRequestTimeout(int timeout);
 boolean shouldDegradeHttpDns(String host);
 ```
 
-<br>
 
 ``` java
 /**
@@ -337,7 +325,6 @@ boolean shouldDegradeHttpDns(String host);
 void clearCache();
 ```
 
-<br/>
 
 ### HttpDnsConfig
 
@@ -383,7 +370,6 @@ public class HttpDnsConfig {
 }
 ```
 
-<br/>
 
 ### RepositoryType
 
