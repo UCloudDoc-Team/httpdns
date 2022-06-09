@@ -17,12 +17,12 @@
 
 ### 使用说明
 
-* 导入头文件
+#### 导入头文件
 ```oc
 #import <UHttpDnsSDK/UHttpDnsSDK.h>
 ```
 
-* 初始化
+#### 初始化
 ```oc
 // 自定义serverUrl（不设置，默认使用UCloud HttpDns平台服务）
 [[UHttpDnsManager shared] customServerUrl:@"http://xxx"];
@@ -34,17 +34,17 @@
 [[UHttpDnsManager shared] enableCacheIP:YES];
 ```
 
-* 域名预解析
+#### 域名预解析
 ```oc
  [[UHttpDnsManager shared] preGetIPsWithDomains:@[xxx]];
 ```
 
-* 域名解析（IPv4）
+#### 域名解析（IPv4）
 ```oc
 - (void)getIPV4ByDomain:(NSString *)domain returnBlock:(ReturnBlock)handler;
 ```
 
-* 域名解析（IPv6）
+#### 域名解析（IPv6）
 ```oc
 - (void)getIPV6ByDomain:(NSString *)domain returnBlcok:(ReturnBlock)handler;
 ```
@@ -53,175 +53,141 @@
 
 ### 初始化SDK
     
-**接口描述** 
-
->  初始化SDK。
-
-**接口示例**
+#### 接口说明
 
 ```oc
+/**
+ *  @abstract 初始化SDK
+ *
+ *  @param authId 鉴权Id，UCloud HttpDns平台申请。
+ *  @param authSecret 鉴权Secret，UCloud HttpDns平台申请。
+ */
 - (void)registerAuthId:(NSString *)authId authSecret:(NSString *)authSecret;
 ```
 
-**参数说明**
-
-> authId：鉴权Id，UCloud HttpDns平台申请。
-> authSecret：鉴权Secret，UCloud HttpDns平台申请。
-
--------
-
 ### 自定义服务器地址
 
-**接口描述** 
-
->  自定义服务器地址，常用于私有化部署（默认使用UCloud HttpDns平台）。
-
-**接口示例**
+#### 接口说明
 
 ```oc
+/**
+ *  @abstract 自定义服务器地址，常用于私有化部署（默认使用UCloud HttpDns平台）
+ *
+ *  @param url 自定义服务器地址
+ */
 - (void)customServerUrl:(NSString *)url;
 ```
 -------
 
 ### 域名预解析
 
-**接口描述** 
-
->  在应用调用相关接口之前解析，提升速度。
-
-**接口示例**
+#### 接口说明
 
 ```oc
+/**
+ *  @abstract 域名预解析（注意：只有开启域名缓存时，才有效）
+ *
+ *  @param domains 需要解析的域名信息，UDNSPreResolveModel详情查看SDK定义。
+ */
 - (void)preGetIPsWithDomains:(NSArray <UDNSPreResolveModel *> *)domains;
 ```
 
-**参数说明**
-
-> domains: 需要解析的域名信息，UDNSPreResolveModel详情查看SDK定义。
-
--------
-
 ### 域名解析（IPv4）
 
-**接口描述** 
-
->  域名解析为IPv4地址。
-
-**接口示例**
+#### 接口说明
 
 ```oc
+/**
+ *  @abstract 获取域名解析IP（IPv4）
+ *
+ *  @param domain 需要解析的域名
+ *  @param returnBlock 解析结果回调。
+ */
 - (void)getIPV4ByDomain:(NSString *)domain returnBlock:(ReturnBlock)handler;
 ```
 
-**参数说明**
-
-> domain：待解析的域名。
-> returnBlock：解析结果回调。
-
--------
-
 ### 域名解析（IPv6）
 
-**接口描述** 
-
->  域名解析为IPv6地址。
-
-**接口示例**
+#### 接口说明
 
 ```oc
+/**
+ *  @abstract 获取域名解析IP（IPv6）
+ *
+ *  @param domain 需要解析的域名
+ *  @param returnBlcok 解析结果回调。
+ */
 - (void)getIPV6ByDomain:(NSString *)domain returnBlcok:(ReturnBlock)handler;
 ```
 
-**参数说明**
-
-> domain：待解析的域名。
-> returnBlock：解析结果回调。
-
--------
-
 ### 开启IP缓存
 
-**接口描述** 
-
-> 开启后，域名解析成功的IP会被持久化缓存。
-
-**接口示例**
+#### 接口说明
 
 ```oc
+/**
+ *  @abstract 是否允许缓存IP（开启后，域名解析时返回缓存命中的值）
+ *
+ *  @param enable 开关
+ */
 - (void)enableCacheIP:(BOOL)enable;
 ```
 
-**参数说明**
-
-> enable: 是否开启IP持久化缓存。
-
--------
-
 ### 返回过期的IP
 
-**接口描述** 
-
->  开启后，获取域名对应的解析IP时，过期IP也会被返回。
-
-**接口示例**
+#### 接口说明
 
 ```oc
+/**
+ *  @abstract 开启后，获取域名对应的解析IP时，过期IP也会被返回
+ *
+ *  @param enable 开关
+ */
 - (void)enableExpiredIp:(BOOL)enable;
 ```
 
-**参数说明**
-
-> enable: 是否允许过期IP返回。
-
--------
-
 ### 清除所有缓存
 
-**接口描述** 
-
->  清除所有缓存的IP。
-
-**接口示例**
+#### 接口说明
 
 ```oc
+/**
+ *  @abstract 清除所有缓存的IP
+ */
 - (void)cleanAllCache;
 ```
--------
 
 ### 日志打印
 
-**接口描述** 
-
->  SDK内部日志打印。
-
-**接口示例**
+#### 接口说明
 
 ```oc
+/**
+ *  @abstract 控制台输出日志开关
+ *
+ *  @param enable 日志输出开关
+ */
 - (void)consolePrintLogEnable:(BOOL)enable;
 ```
 
-**参数说明**
-
-> enable: 是否开启SDK日志打印。
-
--------
-
 ### SDK版本
 
-**接口描述** 
-
->  SDK当前版本。
-
-**接口示例**
+#### 接口说明
 
 ```oc
+/**
+ *  @abstract SDK版本
+ */
 + (NSString *)sdkVersion;
 ```
--------
 
 ## 其他注意事项
 
 其它接口的使用方法，请参考Demo中的示例。
+        
+
+	
+
         
 
 	
