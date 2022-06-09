@@ -19,13 +19,14 @@
 * 将httpdns-sdk-android.aar包放置于android studio的app项目目录里的libs目录下
 * 编辑app/build.gradle配置文件，按照如下方式配置依赖项：
 
- ``` java
- dependencies {
+ 
+``` java
+dependencies {
     // Your other dependencies
     implementation files('libs/httpdns-sdk-android.aar')
     implementation 'com.google.code.gson:gson:2.8.8'
 }
- ```
+```
 
 
 #### 快速开始
