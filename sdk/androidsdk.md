@@ -6,7 +6,16 @@
 
 ### 使用前提
 
-* 已创建应用并添加域名，记录对应应用的**AppKey**和**AppSecret**。**不在域名管理中的域名，sdk将无法解析**。下载Android SDK安装包。
+
+### 使用前提
+* 已创建应用，记录对应应用的**AppKey**和**AppSecret**。
+* 已添加域名，**不在域名管理中的域名，sdk将无法解析**。
+* 下载iOS SDK安装包。
+
+
+### 使用说明
+
+#### 添加依赖
 * 将httpdns-sdk-android.aar包放置于android studio的app项目目录里的libs目录下
 * 编辑app/build.gradle配置文件，按照如下方式配置依赖项：
 
@@ -20,7 +29,6 @@
 
 <br/>
 
-### 使用说明
 
 ``` xml
 <uses-permission android:name="android.permission.INTERNET" />
@@ -75,18 +83,18 @@ service.register(new HttpDnsConfig(), new RegisterCallback() {
 
 <br/>
 
-## API
+## SDK接口说明
 
 ### HttpDns
 
-> SDK版本信息
+#### SDK版本信息
 
 ``` java
 static final int VERSION_CODE        // 版本数值编号（递增）
 static final String VERSION_NAME     // 版本号名称
 ```
 
-> 获取HttpDnsService
+#### 获取HttpDnsService
 
 ``` java
 /**
@@ -100,7 +108,7 @@ static final String VERSION_NAME     // 版本号名称
 static HttpDnsService getService(@NonNull Context applicationContext, @NonNull String appKey)
 ```
 
-> 获取HttpDnsService
+#### 获取HttpDnsService
 
 ``` java
 /**
@@ -118,7 +126,7 @@ static HttpDnsService getService(@NonNull Context applicationContext, @NonNull S
 
 ### HttpDnsService
 
-> 注册HttpDnsService
+#### 注册HttpDnsService
 
 ``` java
 /**
@@ -133,7 +141,7 @@ void register(HttpDnsConfig config, @NonNull String serviceUrl, @NonNull Registe
 
 <br>
 
-> 注册私有化部署HttpDnsService
+#### 注册私有化部署HttpDnsService
 
 ``` java
 /**
@@ -148,7 +156,7 @@ void register(HttpDnsConfig config, @NonNull String serviceUrl, @NonNull Registe
 
 <br>
 
-> 添加解析回调
+#### 添加解析回调
 
 ``` java
 /**
@@ -162,7 +170,7 @@ void addParseHostCallback(ParseHostCallback callback);
 
 <br>
 
-> 移除解析回调
+#### 移除解析回调
 
 ``` java
 /**
@@ -175,7 +183,7 @@ void removeParseHostCallback(ParseHostCallback callback);
 
 <br>
 
-> 设置预解析域名列表
+#### 设置预解析域名列表
 
 **【注意！】:若不启用缓存，则该接口不执行任何操作！**
 
@@ -193,7 +201,7 @@ void setPreParseHosts(List<Host> hosts);
 
 <br>
 
-> 异步解析域名，获取IPv4解析结果列表
+#### 异步解析域名，获取IPv4解析结果列表
 
 ``` java
 /**
@@ -208,7 +216,7 @@ String[] parseIpsAsync(String host);
 
 <br>
 
-> 异步解析域名，获取IPv6解析结果列表
+#### 异步解析域名，获取IPv6解析结果列表
 
 ``` java
 /**
@@ -223,7 +231,7 @@ String[] parseIPv6sAsync(String host);
 
 <br>
 
-> 设置是否允许返回超时的解析结果
+#### 设置是否允许返回超时的解析结果
 
 ``` java
 /**
@@ -236,7 +244,7 @@ void setExpiredResultEnabled(boolean enable);
 
 <br>
 
-> 设置是否允许启用缓存
+#### 设置是否允许启用缓存
 
 ``` java
 /**
@@ -249,7 +257,7 @@ void setCachedResultEnabled(boolean enable);
 
 <br>
 
-> 设置是否允许启用缓存，以及是否在缓存加载过后自动清除
+#### 设置是否允许启用缓存，以及是否在缓存加载过后自动清除
 
 ``` java
 /**
@@ -263,7 +271,7 @@ void setCachedResultEnabled(boolean enable, boolean autoCleanCacheAfterLoad);
 
 <br>
 
-> 设置降级策略
+#### 设置降级策略
 
 ``` java
 /**
@@ -277,7 +285,7 @@ void setDegradationFilter(DegradationFilter filter);
 
 <br>
 
-> 设置网络切换时是否自动刷新所有域名解析结果
+#### 设置网络切换时是否自动刷新所有域名解析结果
 
 ``` java
 /**
@@ -290,7 +298,7 @@ void setPreParseAfterNetworkChanged(boolean enable);
 
 <br>
 
-> 设置请求超时时间
+#### 设置请求超时时间
 
 ``` java
 /**
@@ -306,7 +314,7 @@ void setRequestTimeout(int timeout);
 
 ### DegradationFilter
 
-> 是否需要降级解析
+#### 是否需要降级解析
 
 ``` java
 /**
