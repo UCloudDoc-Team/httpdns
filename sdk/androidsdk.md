@@ -82,7 +82,6 @@ service.register(new HttpDnsConfig(), new RegisterCallback() {
         });
 ```
 
-<br/>
 
 ## SDK接口说明
 
@@ -196,8 +195,6 @@ void removeParseHostCallback(ParseHostCallback callback);
 void setPreParseHosts(List<Host> hosts);
 ``` 
 
-
-
 #### 异步解析域名，获取IPv4解析结果列表
 
 ``` java
@@ -275,8 +272,6 @@ void setCachedResultEnabled(boolean enable, boolean autoCleanCacheAfterLoad);
  */
 void setDegradationFilter(DegradationFilter filter);
 ``` 
-
-<br>
 
 #### 设置网络切换时是否自动刷新所有域名解析结果
 
