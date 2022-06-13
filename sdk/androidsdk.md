@@ -11,6 +11,8 @@
 
 ### 开发环境
 * android 6.0(api23) 及以上
+* Android Studio 2021.+
+* 建议Gradle 7.+，gradle plug 7.+
 
 ### 使用说明
 
