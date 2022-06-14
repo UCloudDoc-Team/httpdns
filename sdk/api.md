@@ -15,7 +15,7 @@ http://httpdns.ucloud.cn
 | 名称          | 位置   | 类型    | 必填 | 描述                                                         |
 | :------------ | ------ | ------- | ---- | ------------------------------------------------------------ |
 | auth_id       | Path   | String  | 是   | 鉴权 ID。                                                    |
-| Authorization | Header | String  | 是   | 签名字符串为所有 url 参数按照参数命字典序列排序，例如 b=b1&c=c1&a=a1 的签名字符串为 a1-b1-c1-\<AuthSecret\>，然后计算出md5值，并转成全小写，其中 \<AuthSecret\> 用实际的鉴权 Secret 替代。 |
+| Authorization | Header | String  | 是   | 签名字符串为所有 url 参数按照参数名字典序列排序，例如 b=b1&c=c1&a=a1 的签名字符串为 a1-b1-c1-\<AuthSecret\>，然后计算出md5值，并转成全小写，其中 \<AuthSecret\> 用实际的鉴权 Secret 替代。 |
 | timestamp     | Query  | Integer | 是   | 秒级时间戳，过期时间为1分钟。                                |
 | ip            | Query  | String  | 否   | 客户端 IP，用于就近接入。                                    |
 | app_id        | Query  | String  | 否   | APP ID，对于iOS应用为 Bundle ID，对于 Android 应用为 Package Name，当使用的鉴权 ID 属于控制台上创建的应用时，该参数必填。 |
@@ -36,7 +36,7 @@ http://httpdns.ucloud.cn
 | 名称          | 位置   | 类型    | 必填 | 描述                                                         |
 | :------------ | ------ | ------- | ---- | ------------------------------------------------------------ |
 | auth_id       | Path   | String  | 是   | 鉴权 ID。                                                    |
-| Authorization | Header | String  | 是   | 签名字符串为所有 url 参数按照参数命字典序列排序，例如 b=b1&c=c1&a=a1 的签名字符串为 a1-b1-c1-\<AuthSecret\>，然后计算出md5值，并转成全小写，其中 \<AuthSecret\> 用实际的鉴权 Secret 替代。 |
+| Authorization | Header | String  | 是   | 签名字符串为所有 url 参数按照参数名字典序列排序，例如 b=b1&c=c1&a=a1 的签名字符串为 a1-b1-c1-\<AuthSecret\>，然后计算出md5值，并转成全小写，其中 \<AuthSecret\> 用实际的鉴权 Secret 替代。 |
 | timestamp     | Query  | Integer | 是   | 秒级时间戳，过期时间为1分钟。                                |
 | host          | Query  | String  | 是   | 需要解析的域名                                               |
 | app_id        | Query  | String  | 否   | APP ID，对于iOS应用为 Bundle ID，对于 Android 应用为 Package Name，当使用的鉴权 ID 属于控制台上创建的应用时，该参数必填。 |
