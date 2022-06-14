@@ -19,6 +19,9 @@
 * 开发指南
     * [Android SDK接入文档](/httpdns/sdk/androidsdk)
     * [iOS SDK接入文档](/httpdns/sdk/iossdk)
+    * [HTTP API接入文档](/httpdns/sdk/api)
+
+* [常见问题](/httpdns/faq)
 
       
     
